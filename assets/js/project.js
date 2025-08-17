@@ -57,13 +57,6 @@ const projects = [
         category: "filter-others",
         link: "https://kit.edu.bd/",
         galleryTitle: "KIT Website"
-    },
-    {
-        title: "KIT Soft BD",
-        image: "assets/img/portfolio/kitsoft.PNG",
-        category: "filter-others",
-        link: "https://kitsoftbd.com/",
-        galleryTitle: "KIT Soft"
     }
 ];
 
