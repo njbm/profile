@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Noor Jaber Bhuiyan Masud</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f5;
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 30px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+
+        .header .title {
+            font-size: 16px;
+            font-weight: 400;
+            margin-bottom: 20px;
+            opacity: 0.95;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 14px;
+        }
+
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 35px;
+        }
+
+        .section:last-child {
+            margin-bottom: 0;
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 3px solid #667eea;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .summary-text {
+            text-align: justify;
+            color: #444;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 12px;
+            font-size: 14px;
+        }
+
+        .tech-item {
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .tech-item strong {
+            color: #333;
+            font-weight: 600;
+        }
+
+        .job {
+            margin-bottom: 25px;
+        }
+
+        .job:last-child {
+            margin-bottom: 0;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 8px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .job-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #333;
+        }
+
+        .job-company {
+            font-size: 14px;
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        .job-date {
+            font-size: 13px;
+            color: #777;
+            font-style: italic;
+        }
+
+        .job-responsibilities {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .job-responsibilities li {
+            padding-left: 20px;
+            position: relative;
+            margin-bottom: 6px;
+            color: #555;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .job-responsibilities li:before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .project {
+            margin-bottom: 20px;
+        }
+
+        .project:last-child {
+            margin-bottom: 0;
+        }
+
+        .project-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .project-description {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .project-description li {
+            padding-left: 20px;
+            position: relative;
+            margin-bottom: 5px;
+            color: #555;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .project-description li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .education-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .education-degree {
+            font-size: 15px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .education-school {
+            font-size: 14px;
+            color: #667eea;
+            margin-top: 2px;
+        }
+
+        .education-date {
+            font-size: 13px;
+            color: #777;
+            font-style: italic;
+        }
+
+        .strengths-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 8px;
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .strengths-list li {
+            padding-left: 20px;
+            position: relative;
+            color: #555;
+            font-size: 14px;
+        }
+
+        .strengths-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .download-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+
+            .download-btn {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 26px;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
+            }
+
+            .content {
+                padding: 30px 20px;
+            }
+
+            .job-header {
+                flex-direction: column;
+            }
+
+            .download-btn {
+                bottom: 20px;
+                right: 20px;
+                padding: 12px 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>NOOR JABER BHUIYAN MASUD</h1>
+            <div class="title">Laravel Full-Stack Developer (SaaS & Fintech)</div>
+            <div class="contact-info">
+                <span>📍 Dhaka, Bangladesh</span>
+                <span>📧 jabermasud.dev@gmail.com</span>
+                <span>🔗 github.com/njbm</span>
+                <span>💼 linkedin.com/in/masud9900</span>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="section">
+                <h2 class="section-title">Summary</h2>
+                <p class="summary-text">
+                    Laravel Full-Stack Developer with 4+ years of professional experience building SaaS, fintech, and enterprise-grade applications. Strong expertise in Laravel architecture, REST APIs, real-time systems, payment & virtual card integrations, and Meta (WhatsApp/Messenger/Instagram) APIs. Proven ability to design scalable, secure, and high-performance systems used in production.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Core Technologies</h2>
+                <div class="tech-grid">
+                    <div class="tech-item"><strong>Backend:</strong> PHP, Laravel, MVC, REST APIs, JSON</div>
+                    <div class="tech-item"><strong>Frontend:</strong> Blade, HTML5, CSS3, JavaScript</div>
+                    <div class="tech-item"><strong>Database:</strong> MySQL, MariaDB (indexing, optimization)</div>
+                    <div class="tech-item"><strong>Real-Time:</strong> Laravel Reverb, Echo, WebSockets</div>
+                    <div class="tech-item"><strong>Integrations:</strong> Payment Gateways, Virtual Cards, Meta APIs</div>
+                    <div class="tech-item"><strong>Security:</strong> Authentication, Authorization, RBAC</div>
+                    <div class="tech-item"><strong>Queues & Jobs:</strong> Laravel Queues, Background Workers</div>
+                    <div class="tech-item"><strong>DevOps:</strong> Linux, Apache/Nginx, Docker, CI/CD</div>
+                    <div class="tech-item"><strong>Tools:</strong> Git, GitHub, Postman</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Professional Experience</h2>
+                
+                <div class="job">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Software Engineer (Laravel)</div>
+                            <div class="job-company">Bug Finder</div>
+                        </div>
+                        <div class="job-date">Sep 2023 – Present</div>
+                    </div>
+                    <ul class="job-responsibilities">
+                        <li>Designed and maintained scalable SaaS and fintech applications using Laravel</li>
+                        <li>Built secure RESTful APIs and role-based access control systems</li>
+                        <li>Implemented event-driven real-time systems using Laravel Reverb & Echo</li>
+                        <li>Integrated payment gateways and virtual card systems</li>
+                        <li>Worked with Meta APIs (WhatsApp, Messenger, Instagram) for omnichannel communication</li>
+                        <li>Optimized database performance via indexing, query tuning, and caching</li>
+                        <li>Collaborated closely with product, UI/UX, and QA teams</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Web Development Trainer (Laravel & PHP)</div>
+                            <div class="job-company">Knowledge IT Institute</div>
+                        </div>
+                        <div class="job-date">2022</div>
+                    </div>
+                    <ul class="job-responsibilities">
+                        <li>Trained students on Laravel, MVC architecture, REST APIs, and database design</li>
+                        <li>Mentored junior developers on clean code and best practices</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Selected Projects</h2>
+                
+                <div class="project">
+                    <div class="project-title">Omnichannel CRM & Live Chat Platform (SaaS)</div>
+                    <ul class="project-description">
+                        <li>Real-time chat system using Laravel Reverb, Echo, and event broadcasting</li>
+                        <li>Unified inbox for WhatsApp, Messenger, Instagram via Meta APIs</li>
+                        <li>Role-based agent management and conversation tracking</li>
+                    </ul>
+                </div>
+
+                <div class="project">
+                    <div class="project-title">Pay Secure – Digital Wallet & Virtual Card System</div>
+                    <ul class="project-description">
+                        <li>Multi-wallet architecture with virtual card issuance</li>
+                        <li>Integrated 35+ payment gateways</li>
+                        <li>Secure transactions, background jobs, and audit logging</li>
+                    </ul>
+                </div>
+
+                <div class="project">
+                    <div class="project-title">Marketlyst – Multi-Vendor E-commerce Platform</div>
+                    <ul class="project-description">
+                        <li>CodeCanyon-grade product with admin, vendor, and customer panels</li>
+                        <li>Order management, payments, reporting, and scalable architecture</li>
+                    </ul>
+                </div>
+
+                <div class="project">
+                    <div class="project-title">ZyloChat – Live Chat & Visitor Tracking (SaaS)</div>
+                    <ul class="project-description">
+                        <li>Real-time visitor monitoring and messaging</li>
+                        <li>Performance-optimized Laravel backend</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Education</h2>
+                <div class="education-item">
+                    <div>
+                        <div class="education-degree">B.Sc. in Computer Science & Engineering</div>
+                        <div class="education-school">Northern University Bangladesh</div>
+                    </div>
+                    <div class="education-date">2021 – 2024</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Professional Strengths</h2>
+                <ul class="strengths-list">
+                    <li>SaaS & enterprise system design</li>
+                    <li>Fintech & payment integrations</li>
+                    <li>Real-time and event-driven architecture</li>
+                    <li>Clean, maintainable, production-ready code</li>
+                    <li>Strong communication & leadership mindset</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <button class="download-btn" onclick="window.print()">📄 Download as PDF</button>
+
+    <script>
+        // You can use the browser's print function (Ctrl+P or Cmd+P) to save as PDF
+        // Or click the download button which triggers the print dialog
+    </script>
+</body>
+</html>
