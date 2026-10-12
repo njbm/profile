@@ -2,6 +2,8 @@
 
 Welcome to my **personal developer portfolio**, built to showcase my skills, projects, and experience as a Software Engineer specializing in Full-stack Web Development with a focus on Laravel.
 
+🔗 **Live Site**: [https://njbm.github.io/profile](https://njbm.github.io/profile)
+
 ---
 
 ## 🛠️ Technologies Used
@@ -84,6 +86,14 @@ VITE_SUPABASE_URL=https://your_project_id.supabase.co
 | `npm run build`   | Build for production into `dist/`   |
 | `npm run preview` | Preview the production build        |
 | `npm run lint`    | Run ESLint                          |
+
+---
+
+## 🌍 Deployment
+
+Every push to `main` is built and deployed to **GitHub Pages** by
+`.github/workflows/deploy.yml`. In the repository settings, **Pages → Source**
+must be set to **GitHub Actions**.
 
 ---
 
