@@ -1,73 +1,93 @@
-# Welcome to your Lovable project
+# 🧑‍💻 Jaber Masud - Developer Portfolio
 
-## Project info
+Welcome to my **personal developer portfolio**, built to showcase my skills, projects, and experience as a Software Engineer specializing in Full-stack Web Development with a focus on Laravel.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+---
 
-## How can I edit this code?
+## 🛠️ Technologies Used
 
-There are several ways of editing your application.
+- **React 18** + **TypeScript**
+- **Vite** for development and builds
+- **Tailwind CSS** + **shadcn/ui** (Radix UI)
+- **Framer Motion** for animations
+- **Supabase Edge Functions** for the AI chatbot backend
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## 🎯 Features
 
-Changes made via Lovable will be committed automatically to this repo.
+- 🚀 Hero section with a clear introduction and call to action
+- 👨‍💼 About, Services and Skills sections
+- 📊 Statistics and Experience timeline
+- 🧑‍💻 Projects showcase section with descriptions
+- 🤖 AI-powered portfolio chatbot that answers questions about my work
+- 📫 Contact section with a message form and social links
+- 📱 Fully responsive design across all devices
+- 💡 Smooth animations and transitions
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 📁 Project Structure
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+```
+src/
+├── components/      # Page sections (Hero, About, Projects, Chatbot, ...)
+│   └── ui/          # shadcn/ui components
+├── pages/           # Index and NotFound pages
+├── integrations/    # Supabase client
+├── hooks/           # Custom React hooks
+└── lib/             # Utilities
+supabase/
+└── functions/
+    └── portfolio-chat/   # Edge Function for the chatbot
+```
 
-Follow these steps:
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## 🚀 Getting Started
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Requirements: **Node.js 18+** and **npm**.
 
-# Step 3: Install the necessary dependencies.
-npm i
+```bash
+# 1. Clone the repository
+git clone https://github.com/njbm/profile.git
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# 2. Navigate into the project folder
+cd profile
+
+# 3. Install dependencies
+npm install
+
+# 4. Start the development server (http://localhost:8080)
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 🔐 Environment Variables
 
-**Use GitHub Codespaces**
+Create a `.env` file in the project root:
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```env
+VITE_SUPABASE_PROJECT_ID=your_project_id
+VITE_SUPABASE_PUBLISHABLE_KEY=your_publishable_key
+VITE_SUPABASE_URL=https://your_project_id.supabase.co
+```
 
-## What technologies are used for this project?
+---
 
-This project is built with:
+## 📜 Available Scripts
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+| Command           | Description                         |
+| ----------------- | ----------------------------------- |
+| `npm run dev`     | Start the development server        |
+| `npm run build`   | Build for production into `dist/`   |
+| `npm run preview` | Preview the production build        |
+| `npm run lint`    | Run ESLint                          |
 
-## How can I deploy this project?
+---
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+## 📫 Contact
 
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+- 🌐 **GitHub**: [github.com/njbm](https://github.com/njbm)
+- 📧 **Email**: [jabermasud.dev@gmail.com](mailto:jabermasud.dev@gmail.com)
