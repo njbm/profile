@@ -8,6 +8,7 @@ import { Services } from '@/components/Services';
 import { Statistics } from '@/components/Statistics';
 import { Contact } from '@/components/Contact';
 import { Footer } from '@/components/Footer';
+import PortfolioChatbot from '@/components/PortfolioChatbot';
 
 const Index = () => {
   return (
@@ -24,6 +25,7 @@ const Index = () => {
         <Contact />
       </main>
       <Footer />
+      <PortfolioChatbot />
     </div>
   );
 };
